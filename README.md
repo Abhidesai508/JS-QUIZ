@@ -8,4 +8,4 @@ Live website: https://abhidesai508.github.io/JS-QUIZ/
 
 ## Screenshot
 
-![Alt text](Assets/Images/Screenshot%202023-04-13%20025929.png)
+![Alt text](Assets/Images/Screenshot%202023-04-13%20031521.png)
