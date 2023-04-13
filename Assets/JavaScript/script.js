@@ -81,7 +81,7 @@ function Question() {
 
 function questionClick() {
     if (this.value !== questions[currentQuestionpoint].answer) {
-      quiztime -= 10;
+      quiztime -= 20;
       if (quiztime < 0) {
         quiztime = 0;
       }
