@@ -25,7 +25,8 @@ header {
     align-items: center;
     margin: 0 auto;
     padding: 2rem;
-    max-width: 2200px;
+    max-width: 2500px;
+    margin-bottom: 20px;;
     height: 100%;
     background-color: black;
     color:beige;
