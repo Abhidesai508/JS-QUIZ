@@ -51,7 +51,7 @@ var timer;
 // Starting quiz
 
 function Start() {
-    timer = setInterval(clockTick, 1000);
+    timer = setInterval(Tick, 1000);
     timerEl.textContent = quiztime;
     var landingScreen = document.getElementById("start-screen");
     landingScreen.setAttribute("class", "hide");
@@ -69,17 +69,17 @@ function Question() {
   promptElement.textContent = currentQuestion.prompt;
     choicesEl.innerHTML = "";
     currentQuestion.options.forEach(function(choice, i) {
-        var choiceBtn = document.createElement("button");
-        choiceBtn.setAttribute("value", choice);
-        choiceBtn.textContent = i + 1 + ". " + choice;
-        choiceBtn.onclick = questionClick;
-        choicesEl.appendChild(choiceBtn);
+        var choice = document.createElement("button");
+        choicesection.setAttribute("value", choice);
+        choicesection.textContent = i + 1 + ". " + choice;
+        choicesection.onclick = questionselected;
+        choicesEl.appendChild(choicesection);
     });
 }
 
 // Checking whether the answer is correct or not. if not, then dedcuting the time by 10s and moving to next question
 
-function questionClick() {
+function questionselected() {
     if (this.value !== questions[currentQuestionpoint].answer) {
       quiztime -= 20;
       if (quiztime < 0) {
@@ -117,7 +117,7 @@ function quizEnd() {
 
 // End quiz if timer reaches 0
 
-function clockTick() {
+function Tick() {
   quiztime--;
     timerEl.textContent = quiztime;
     if (quiztime <= 0) {
