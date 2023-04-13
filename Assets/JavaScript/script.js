@@ -65,8 +65,8 @@ function Start() {
 
 function Question() {
     var currentQuestion = questions[currentQuestionpoint];
-  var promptEl = document.getElementById("question-words")
-    promptEl.textContent = currentQuestion.prompt;
+  var promptElement = document.getElementById("question-words")
+  promptElement.textContent = currentQuestion.prompt;
     choicesEl.innerHTML = "";
     currentQuestion.options.forEach(function(choice, i) {
         var choiceBtn = document.createElement("button");
@@ -177,10 +177,3 @@ function printHighscores() {
       olEl.appendChild(liTag);
     });
 }
-
-// Clear previous scores when users click clear 
-  function clearHighscores() {
-    window.localStorage.removeItem("highscores");
-    window.location.reload();
-  } document.getElementById("clear").onclick = clearHighscores;
-  
