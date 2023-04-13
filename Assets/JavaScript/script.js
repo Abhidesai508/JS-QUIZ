@@ -69,7 +69,7 @@ function Question() {
   promptElement.textContent = currentQuestion.prompt;
     choicesEl.innerHTML = "";
     currentQuestion.options.forEach(function(choice, i) {
-        var choice = document.createElement("button");
+        var choicesection = document.createElement("button");
         choicesection.setAttribute("value", choice);
         choicesection.textContent = i + 1 + ". " + choice;
         choicesection.onclick = questionselected;
